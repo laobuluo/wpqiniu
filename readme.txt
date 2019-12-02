@@ -5,7 +5,7 @@ Donate link: https://www.laobuluo.com/donate/
 Tags:WordPress对象存储,七牛对象存储,七牛云存储WordPress,七牛WordPress,七牛加速WordPress,WordPress加速
 Requires at least: 4.5.0
 Tested up to: 5.3
-Stable tag: 1.0
+Stable tag: 1.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -54,6 +54,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 = 1.0 =
 * 1. 检查是否支持WP5.3
 * 2. 修复新版本WP5.3的图片处理逻辑
+
+= 1.1 =
+* 1. 感觉网友emerge同学提出来解决删除媒体库小图不删除问题
 
 == Upgrade Notice ==
 * 

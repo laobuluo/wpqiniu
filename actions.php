@@ -109,7 +109,7 @@ function wpqiniu_delete_remote_attachment($post_id) {
 	if (isset($meta['sizes']) && count($meta['sizes']) > 0) {
 		foreach ($meta['sizes'] as $val) {
 			$attachment_thumbs_key = dirname($meta['file']) . '/' . $val['file'];
-			$deleteObjects[] = array( 'Key' => $attachment_thumbs_key, );
+			$deleteObjects[] = $attachment_thumbs_key;
 		}
 	}
 
