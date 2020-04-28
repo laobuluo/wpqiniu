@@ -1,11 +1,11 @@
-=== WPQiNiu ===
+=== WPQiNiu七牛云对象存储 ===
 
 Contributors: laobuluo
 Donate link: https://www.laobuluo.com/donate/
 Tags:WordPress对象存储,七牛对象存储,七牛云存储WordPress,七牛WordPress,七牛加速WordPress,WordPress加速
 Requires at least: 4.5.0
-Tested up to: 5.3
-Stable tag: 1.1
+Tested up to: 5.4
+Stable tag: 1.2.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,7 +56,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * 2. 修复新版本WP5.3的图片处理逻辑
 
 = 1.1 =
-* 1. 感觉网友emerge同学提出来解决删除媒体库小图不删除问题
+* 1. 感谢网友emerge同学提出来解决删除媒体库小图不删除问题
+
+= 1.2.1 =
+* 1. 更新CSS样式极简风格
+* 2. 准备重构插件代码
+* 3. 检测支持WP5.4
 
 == Upgrade Notice ==
 * 

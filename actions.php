@@ -2,7 +2,7 @@
 require_once 'api.php';
 # SDK最低支持版本
 
-define( 'WPQiNiu_VERSION', 1.0 );  // 插件数据版本
+define( 'WPQiNiu_VERSION', 1.2 );  // 插件数据版本
 define( 'WPQiNiu_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );  // 插件路径
 define('WPQiNiu_BASENAME', plugin_basename(__FILE__));
 define('WPQiNiu_BASEFOLDER', plugin_basename(dirname(__FILE__)));
@@ -220,7 +220,7 @@ function wpqiniu_add_setting_page() {
 	if (!function_exists('wpqiniu_setting_page')) {
 		require_once 'setting_page.php';
 	}
-	add_menu_page('七牛对象存储设置', '七牛对象存储设置', 'manage_options', __FILE__, 'wpqiniu_setting_page');
+	add_options_page('七牛对象存储设置', '七牛对象存储设置', 'manage_options', __FILE__, 'wpqiniu_setting_page');
 }
 
 // 在插件列表页添加设置按钮

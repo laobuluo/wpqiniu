@@ -1,9 +1,9 @@
 <?php
 /**
-Plugin Name: WPQiNiu
+Plugin Name: WPQiNiu(七牛云对象存储)
 Plugin URI: https://www.laobuluo.com/2591.html
-Description: WordPress同步附件内容远程至七牛云对象存储中，实现网站数据与静态资源分离，提高网站加载速度。站长互助QQ群： <a href="https://jq.qq.com/?_wv=1027&k=5gBE7Pt" target="_blank"> <font color="red">594467847</font></a>
-Version: 1.1
+Description: WordPress同步附件内容远程至七牛云对象存储中，实现网站数据与静态资源分离，提高网站加载速度。站长互助QQ群： <a href="https://jq.qq.com/?_wv=1027&k=5IpUNWK" target="_blank"> <font color="red">1012423279</font></a>
+Version: 1.2.1
 Author: 老部落（By:zdl25）
 Author URI: https://www.laobuluo.com
 */

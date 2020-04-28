@@ -23,7 +23,7 @@ function wpqiniu_setting_page() {
 			update_option('upload_url_path', esc_url_raw(trim(trim(stripslashes($_POST['upload_url_path'])))));
 
 			?>
-            <div style="font-size: 25px;color: red; margin-top: 20px;font-weight: bold;"><p>WP七牛插件设置保存完毕!!!</p></div>
+             <div class="notice notice-success settings-error is-dismissible"><p><strong>设置已保存。</strong></p></div>
 
 			<?php
 
@@ -32,43 +32,22 @@ function wpqiniu_setting_page() {
 
 ?>
 
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-
-        table, td, th {border: 1px solid #cccccc;padding:5px;}
-        .buttoncss {background-color: #4CAF50;
-            border: none;cursor:pointer;
-            color: white;
-            padding: 15px 22px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;border-radius: 5px;
-            font-size: 12px;font-weight: bold;
-        }
-        .buttoncss:hover {
-            background-color: #008CBA;
-            color: white;
-        }
-        input{border: 1px solid #ccc;padding: 5px 0px;border-radius: 3px;padding-left:5px;}
-    </style>
-<div style="margin:5px;">
-    <h2>WPQiNiu - WordPress + 七牛对象存储设置</h2>
-    <hr/>
-    
-        <p>WordPress 七牛（简称:WPQiNiu），基于七牛云存储与WordPress实现静态资源到对象存储中。提高网站项目的访问速度，以及静态资源的安全存储功能。</p>
-        <p>插件网站： <a href="https://www.laobuluo.com" target="_blank">老部落</a> / <a href="https://www.laobuluo.com/2591.html" target="_blank">WPQiNiu发布页面地址</a> / 站长互助QQ群： <a href="https://jq.qq.com/?_wv=1027&k=5gBE7Pt" target="_blank"> <font color="red">594467847</font></a>（宗旨：多做事，少说话，效率至上）</p>
-        <p>七牛云存储用户，付费充值可以使用专属优惠码：<font color="red"><b>19345821</b></font>，点击<a href="https://www.itbulu.com/qiniu-recharge.html" target="_blank">查看详细使用指南</a>。</p>
-        
    
-      <hr/>
+<div class="wrap">
+    <h1 class="wp-heading-inline">WPQiNiu - WordPress + 七牛对象存储设置</h1> <a href="https://www.laobuluo.com/2591.html" target="_blank"class="page-title-action">插件介绍</a>
+        <hr class="wp-header-end">        
+    
+        <p>WordPress 七牛（简称:WPQiNiu），基于七牛云存储与WordPress实现静态资源到对象存储中。</p>
+         <p>快速导航：七牛云存储付费充值专属优惠码：<font color="red"><b>19345821</b></font>。<a href="https://www.itbulu.com/qiniu-recharge.html" target="_blank">查看详细使用指南</a> / 站长QQ群： <a href="https://jq.qq.com/?_wv=1027&k=5IpUNWK" target="_blank"> <font color="red">1012423279</font></a>（交流建站和运营） / 公众号：QQ69377078（插件反馈）</p>   
+        
+     <hr/>
     <form action="<?php echo wp_nonce_url('./admin.php?page=' . WPQiNiu_BASEFOLDER . '/actions.php'); ?>" name="wpcosform" method="post">
-        <table>
+        <table class="form-table">
             <tr>
-                <td style="text-align:right;">
-                    <b>存储空间名称：</b>
-                </td>
+                <th scope="row">
+                       存储空间名称
+                    </th>
+               
                 <td>
                     <input type="text" name="bucket" value="<?php echo esc_attr($wpqiniu_options['bucket']); ?>" size="50"
                            placeholder="七牛对象存储空间名称"/>
@@ -79,9 +58,10 @@ function wpqiniu_setting_page() {
             </tr>
 
             <tr>
-               <td style="text-align:right;">
-                    <b>融合CDN加速域名：</b>
-              </td>
+                 <th scope="row">
+                       融合CDN加速域名
+                    </th>
+               
                 <td>
                     <input type="text" name="upload_url_path" value="<?php echo esc_url(get_option('upload_url_path')); ?>" size="50"
                            placeholder="融合CDN加速域名"/>
@@ -95,24 +75,27 @@ function wpqiniu_setting_page() {
             </tr>
 
             <tr>
-                <td style="text-align:right;">
-                    <b>AccessKey 参数：</b>
-                 </td>
+                   <th scope="row">
+                       AccessKey 参数
+                    </th>
+                
                 <td><input type="text" name="accessKey" value="<?php echo esc_attr($wpqiniu_options['accessKey']); ?>" size="50" placeholder="accessKey"/></td>
             </tr>
             <tr>
-               <td style="text-align:right;">
-                    <b>SecretKey 参数：</b>
-                 </td>
+                 <th scope="row">
+                      SecretKey 参数
+                    </th>
+               
                 <td>
                     <input type="text" name="secretKey" value="<?php echo esc_attr($wpqiniu_options['secretKey']); ?>" size="50" placeholder="secretKey"/>
                     <p>登入 <a href="https://portal.qiniu.com/user/key" target="_blank">密钥管理</a> 可以看到 <code>  AccessKey/SecretKey</code>。如果没有设置的需要创建一组。</p>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:right;">
-                    <b>不在本地保存：</b>
-                </td>
+                   <th scope="row">
+                     不在本地保存
+                    </th>
+                
                 <td>
                     <input type="checkbox"
                            name="no_local_file"
@@ -131,7 +114,7 @@ function wpqiniu_setting_page() {
                 <th>
                     
                 </th>
-                <td><input type="submit" name="submit" value="保存WordPress七牛对象存储设置" class="buttoncss" /></td>
+                <td><input type="submit" name="submit" value="保存设置" class="button button-primary" /></td>
 
             </tr>
         </table>
@@ -142,7 +125,13 @@ function wpqiniu_setting_page() {
     <p>1. 如果我们有多个网站需要使用WPQiNiu插件，需要给每一个网站设置一个对象存储，独立空间名。</p>
     <p>2. 使用WPQiNiu插件分离图片、附件文件，存储在七牛云存储空间根目录，比如：2019、2018、2017这样的直接目录，不会有wp-content这样目录。</p>
     <p>3. 如果我们已运行网站需要使用WPQiNiu插件，插件激活之后，需要将本地wp-content目录中的文件对应时间目录上传至七牛存储空间中，且需要在数据库替换静态文件路径生效。</p>
-    <p>4. 详细使用教程参考：<a href="https://www.laobuluo.com/2591.html" target="_blank">WPQiNiu发布页面地址</a>，或者加入QQ群： <a href="https://jq.qq.com/?_wv=1027&k=5gBE7Pt" target="_blank"> <font color="red">594467847</font></a>。</p>
+    
+
+    <hr>
+        <div style='text-align:center;line-height: 50px;'>
+            <a href="https://www.laobuluo.com/" target="_blank">插件主页</a> | <a href="https://www.laobuluo.com/2591.html" target="_blank">插件发布页面</a> | <a href="https://jq.qq.com/?_wv=1027&k=5IpUNWK" target="_blank">QQ群：1012423279</a> | 公众号：QQ69377078（插件反馈）
+
+        </div>
 </div>
 <?php
 }
