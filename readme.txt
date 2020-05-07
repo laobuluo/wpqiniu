@@ -4,8 +4,8 @@ Contributors: laobuluo
 Donate link: https://www.laobuluo.com/donate/
 Tags:WordPress对象存储,七牛对象存储,七牛云存储WordPress,七牛WordPress,七牛加速WordPress,WordPress加速
 Requires at least: 4.5.0
-Tested up to: 5.4
-Stable tag: 1.2.1
+Tested up to: 5.4.1
+Stable tag: 1.2.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * 1. 更新CSS样式极简风格
 * 2. 准备重构插件代码
 * 3. 检测支持WP5.4
+
+= 1.2.2 =
+* 1. 兼容WP5.4.1测试
 
 == Upgrade Notice ==
 * 
