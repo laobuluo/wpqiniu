@@ -1,11 +1,11 @@
 <?php
 /**
 Plugin Name: WPQiNiu(七牛云对象存储插件)
-Plugin URI: https://www.lezaiyun.com/1097.html
+Plugin URI: https://www.laojiang.me/5955.html
 Description: WordPress同步附件内容远程至七牛云对象存储中，实现网站数据与静态资源分离，提高网站加载速度。微信公众号：  <font color="red">老蒋朋友圈</font>
 Version: 5.0
 Author: 老蒋和他的小伙伴
-Author URI: https://www.lezaiyun.com
+Author URI: https://www.laojiang.me
  */
 if (!defined('ABSPATH')) die();
 
